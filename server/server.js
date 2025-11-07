@@ -8,6 +8,7 @@ const app = express();
 const userRouter = require("./routes/user.routes");
 const productRouter = require("./routes/product.routes");
 const cartRouter = require("./routes/cart.routes");
+const checkoutRouter = require("./routes/checkout.routes");
 
 require("dotenv").config();
 
@@ -43,6 +44,7 @@ app.use(express.json());
 app.use("/api/user", userRouter);
 app.use("/api/products", productRouter);
 app.use("/api/cart", cartRouter);
+app.use("/api/checkout", checkoutRouter);
 
 
 app.listen(PORT, () => console.log(`Server is now running on port ${PORT}`));
