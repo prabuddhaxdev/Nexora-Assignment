@@ -38,36 +38,46 @@ MongoDB
 
 RESTful APIs
 
-📁 Folder Structure
-mock-ecom-cart/
+Nexora-Assignment/
 ├── backend/
-│   ├── server.js
-│   ├── routes/
+│   ├── server.js                  # Express server entry point
+│   ├── routes/                    # API route definitions
+│   │   ├── products.js            # Handles product listing endpoints
+│   │   ├── cart.js                # Handles cart CRUD operations
+│   │   └── checkout.js            # Handles checkout and order endpoints
+│   ├── controllers/               # Business logic for each route
+│   │   ├── product.controller.js
+│   │   ├── cart.controller.js
+│   │   └── checkout.controller.js
+│   ├── data/                      # Mock in-memory data
 │   │   ├── products.js
-│   │   ├── cart.js
-│   │   └── checkout.js
-│   ├── models/
-│   └── db/
+│   │   ├── cartStore.js
+│   │   └── ordersStore.js
+│   ├── utils/                     # Helper functions (formatting, etc.)
+│   └── package.json               # Backend dependencies and scripts
 │
 └── frontend/
-    ├── index.html
-    ├── vite.config.js
+    ├── index.html                 # Entry HTML file
+    ├── vite.config.js             # Vite configuration
     └── src/
-        ├── App.jsx
-        ├── main.jsx
-        ├── components/
+        ├── App.jsx                # Root application component
+        ├── main.jsx               # React app bootstrap
+        ├── components/            # Reusable UI and logic components
         │   ├── Navbar.jsx
-        │   ├── products/ProductCard.jsx
-        │   ├── products/ProductGrid.jsx
-        │   ├── cart/CartItem.jsx
-        │   └── ui/
-        ├── context/CartContext.jsx
-        ├── hooks/useCartContext.js
-        ├── pages/
+        │   ├── products/
+        │   │   ├── ProductCard.jsx
+        │   │   └── ProductGrid.jsx
+        │   ├── cart/
+        │   │   └── CartItem.jsx
+        │   └── ui/                # Buttons, modals, inputs, etc.
+        ├── context/               # React context providers
+        │   └── CartContext.jsx
+        ├── hooks/                 # Custom hooks
+        │   └── useCartContext.js
+        ├── pages/                 # App pages and routes
         │   ├── Home.jsx
         │   ├── Cart.jsx
-        │   ├── Checkout.jsx
-        │
+        │   └── Checkout.jsx
         └── styles/
 
 ⚙️ API Endpoints
