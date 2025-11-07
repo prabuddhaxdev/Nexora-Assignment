@@ -6,6 +6,7 @@ const app = express();
 
 
 const userRouter = require("./routes/user.routes");
+const productRouter = require("./routes/product.routes");
 
 require("dotenv").config();
 
@@ -39,5 +40,6 @@ app.use(cookieParser());
 app.use(express.json());
 
 app.use("/api/user", userRouter);
+app.use("/api/products", productRouter);
 
 app.listen(PORT, () => console.log(`Server is now running on port ${PORT}`));
