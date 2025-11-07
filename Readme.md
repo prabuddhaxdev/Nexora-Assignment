@@ -32,7 +32,7 @@ Implements a simple flow: **product listing → add/remove items → checkout �
 ---
 
 ## 📂 Repository Structure
-
+```
 Nexora-Assignment/
 ├── server/
 │ ├── server.js
@@ -76,7 +76,7 @@ Nexora-Assignment/
 │ └── Checkout.jsx
 └── styles/
 
-
+```
 Copy code
 
 ---
